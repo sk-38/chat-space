@@ -14,7 +14,7 @@
 |email|string|null: false|
 |password|string|null: false|
 ### Association
-- has_many :groups_user
+- has_many :groups_users
 - has_many :messages
 - has_many :groups, through: :groups_users
 
@@ -22,22 +22,22 @@
 ## groupsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|groupname|staring|null: false|
+|name|staring|null: false|
 ### Association
 - has_many :users, through: :group_users
 - has_many :messages
-- has_many :group_user
+- has_many :group_users
 
-## messagesteテーブル
+## messagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|body|text|null: false|
-|image|staring|null: false|
+|body|text|
+|image|string|
 |group|references|null: false, foreign_key: true|
 |user| references|null: false, foreign_key: true|
 ### Association
-- belongs_to:users
-- belongs_to:groups
+- belongs_to:user
+- belongs_to:group
 
 
 
