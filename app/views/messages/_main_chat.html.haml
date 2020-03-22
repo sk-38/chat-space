@@ -1,0 +1,20 @@
+.main-chat
+  .main-chat__group-info
+    %p.group-info__left-box__current-group test
+    %P.group-info__left-box__member-list Member:karino
+    = link_to "#", class: "main-chat__group-info__edit-btn" do
+      .group-info__edit-btn edit  
+  .main-chat__messages-list
+    .message
+      .message__upper-info
+        %p.message__upper-info--taker karino
+        %P.message__upper-info--date 2019/11/20(Wed)17:43:01
+      .message__text
+  .main-chat__message-form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"} 
+        %label.input-box__image
+          %i.far.fa-image
+          %input{type: "file", class: "input-box__file"} 
+      .input.submit-btn send
