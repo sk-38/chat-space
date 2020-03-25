@@ -20,7 +20,7 @@
         font-size: 16px;
         font-weight: bold;
       }
-      .top-items__icons {
+      &__icons {
         width: 60px;
         display: flex;
         justify-content: flex-end;
@@ -39,7 +39,7 @@
     .group {
       height: 91px;
       position: relative;
-      .group__group-name {
+      &__group-name {
         width: 260px;
         color: #ffffff;
         font-size: 15px;
@@ -48,7 +48,7 @@
         top: 20px;
         left: 20px;
         }
-        .group__group-latest-message {
+        &__group-latest-message {
         width: 260px;
         color: #ffffff;
         font-size: 11px;
@@ -62,7 +62,7 @@
   .group {
     height: 91px;
     position: relative;
-    .group__group-name {
+    &__group-name {
       width: 260px;
       color: #ffffff;
       font-size: 15px;
@@ -71,7 +71,7 @@
       top: 20px;
       left: 20px;
     }
-    .group__group-latest-message {
+    &__group-latest-message {
       width: 260px;
       color: #ffffff;
       font-size: 11px;
