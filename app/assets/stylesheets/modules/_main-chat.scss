@@ -1,0 +1,135 @@
+.wrapper {
+  display: flex;
+}
+
+.main-chat {
+  width: calc(100vw - 300px);
+  height: 100vh;
+  background-color: #fafafa;
+  float: right;
+  position: relative;
+  top: 0;
+  &__group-info { 
+    width: calc(100vw - 300px);
+    height: 100px;
+    background-color: #ffffff;
+    position: relative;
+    &__left-box {
+      position: absolute;
+      top: 35px;
+      left: 40px;
+
+      &__current-group {
+        font-size: 20px;
+        color: #333333;
+        margin-bottom: 15px;
+      }
+      &__member-list {
+        color: #999999;
+        font-size: 12px;
+        &__member {
+          list-style: none;
+          font-size: 12px;
+          color: #999999;
+          display: inline;
+        }
+      }
+    }
+    &__right-box {
+      position: absolute;
+      top: 28px;
+      right: 40px;
+      text-decoration: none;
+      &__edit-btn {
+        width: 72px;
+        height: 40px;
+        color: #38aef0;
+        font-size: 16px;
+        border: 1px solid;
+        padding: 10px 20px;
+      }
+    } 
+  } 
+
+
+  .main-chat__messages {
+    height: calc(100vh - 190px);
+    width: calc(100vw - 300px);
+    background-color: #fafafa;
+    position: relative;
+    &_message {
+      height: 88px;
+      position: absolute;
+      top: 35px;
+      left: 40px;
+      &__upper-info {
+        display: flex;
+        &__taker {
+          color: #333333;
+          font-size: 16px;
+          font-weight: bold;
+        }
+        &__date {
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
+      }
+    &__text {
+      font-size: 14px;
+      color: #434A54;
+    }
+    } 
+  }
+  .main-chat__message-form {
+    width: calc(100vw - 300px);
+    height: 90px;
+    background-color: #d2d2d2;
+    position: absolute;
+    bottom: 0;
+    position: relative;
+    justify-content: center;
+
+    .new-message {
+      height: 50px;
+      width: calc(100% - 80px); 
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      margin: auto;
+      display: flex;
+
+      .input-box {
+        width: 100%;
+        position: relative;
+        &__text {
+          height: 50px;
+          width: 100%;
+          padding: 0 40px 0 10px;
+        }
+        &__image {
+          font-size: 1.3rem;
+          height: 50px;
+          color: black;
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          .input-box__file {
+            display: none;
+          }
+        }
+      }
+      .submit-btn {
+        background-color: #38aef0;
+        color: #ffffff;
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px;
+        width: 72px;
+        margin-left: 20px;
+      }
+    }
+  }
+}

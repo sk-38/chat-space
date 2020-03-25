@@ -1,0 +1,27 @@
+.main-chat
+  .main-chat__group-info
+    .main-chat__group-info__left-box
+      %h.main-chat__group-info__left-box__current-group test
+      %ul.main-chat__group-info__left-box__member-list
+        Member:
+        %li.main-chat__group-info__left-box__member-list__member 
+          a
+    .main-chat__group-info__right-box
+    = link_to "#", class: "main-chat__group-info__right-box" do
+      .main-chat__group-info__right-box__edit-btn Edit
+
+  .main-chat__messages
+    .main-chat__messages_message
+      .main-chat__messages_message__upper-info
+        %p.main-chat__messages_message__upper-info__taker karino
+        %P.main-chat__messages_message__upper-info__date 2019/11/20(Wed)17:43:01
+      .main-chat__messages-message__text おーい
+      
+  .main-chat__message-form
+    %form.new-message
+      .input-box
+        %input{type: "text", class: "input-box__text", placeholder: "type a message"} 
+        %label.input-box__image
+          %i.far.fa-image
+          %input{type: "file", class: "input-box__file"} 
+      .input.submit-btn send
