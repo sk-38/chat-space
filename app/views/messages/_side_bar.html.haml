@@ -1,12 +1,13 @@
 .said-bar
   .said-bar__user-name
     .top-items
-      %P.top-items__name karino
+      = current_user.name
+      %P.top-items__name
       .top-items__icons
         = link_to "#", class: "top-items__icons__new-group" do
           %i.far.fa-edit
-        = link_to "#", class: "top-items__icons__edit-user" do
-          %i.fa.fa-cog
+        = link_to edit_user_path(current_user) do
+          =icon('fas','cog', class: "top-items__icons__edit-user")
   .groups
     .group
       %p.group__group-name 1
