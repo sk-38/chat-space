@@ -1,17 +1,22 @@
 .said-bar
   .said-bar__user-name
     .top-items
-      = current_user.name
+      karion
       %P.top-items__name
       .top-items__icons
-        = link_to "#", class: "top-items__icons__new-group" do
+        = link_to new_group_path , class: "top-items__icons__new-group" do
           %i.far.fa-edit
         = link_to edit_user_path(current_user) do
           =icon('fas','cog', class: "top-items__icons__edit-user")
   .groups
-    .group
-      %p.group__group-name 1
-      %p.group__group-latest-message メッセージなし！
-    .group
-      %p.group__group-name 2
-      %p.group__group-latest-message メッセージあり！
+    - current_user.groups.each do |group|
+      .group
+      = link_to '#' do
+        .groups__group__name
+          = group.name
+        .groups__group__atest-message
+          メッセージはまだありません
+
+
+         
+   
