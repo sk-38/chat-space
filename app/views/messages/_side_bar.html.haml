@@ -10,9 +10,9 @@
           =icon('fas','cog', class: "top-items__icons__edit-user")
   .groups
     - current_user.groups.each do |group|
-      .group
-      = link_to group_messages_path(group) do
-        .groups__group__name
-          = group.name
-        .groups__group__atest-message
-          = group.show_last_message
+      .group     
+        = link_to group_messages_path(group) do
+          .group__name
+            = group.name
+          .group__latest-message
+            = group.show_last_message

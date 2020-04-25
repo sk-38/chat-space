@@ -53,15 +53,18 @@
 
 
   .main-chat__messages {
+    overflow: auto;
     height: calc(100vh - 190px);
     width: calc(100vw - 300px);
     background-color: #fafafa;
-    position: relative;
+    // position: relative;
     &_message {
-      height: 88px;
-      position: absolute;
-      top: 35px;
-      left: 40px;
+      // height: 88px;
+      // position: absolute;
+      // top: 35px;
+      // left: 40px;
+      padding-left: 40px;
+      margin-bottom: 30px;
       &__upper-info {
         display: flex;
         &__taker {
@@ -80,7 +83,7 @@
       color: #434A54;
     }
     } 
-  }
+   }
   .main-chat__message-form {
     width: calc(100vw - 300px);
     height: 90px;
