@@ -27,7 +27,7 @@ $(function(){
               <div class="main-chat__messages_message__upper-info__taker">
                ${message.user_name}
               </div>
-              <div class="main-chat__messages_message__upper-info__data">
+              <div class="main-chat__messages_message__upper-info__date">
                 ${message.create_at}
               </div>
             </div>
@@ -56,14 +56,15 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.main-chat__messages').append(html);
-      $('.main-chat__messages').animate({ scrollTop: $('.mainchat__messages') [0].scrollHeight});
-      $('form')[0].reset;
+      $('.main-chat__messages').animate({ scrollTop: $('.main-chat__messages') [0].scrollHeight});
+      $('form')[0].reset();
     })
     .fail(function(){
       alert('error');
+    })
+    .always(function() {
+      $('.submit-btn').prop('disabled', false);
     });
-    
-    return false;
   });
 });
 
