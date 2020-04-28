@@ -62,7 +62,7 @@ $(function(){
     .fail(function(){
       alert('error');
     })
-    .always(function() {
+    .always(function(){
       $('.submit-btn').prop('disabled', false);
     });
   });
